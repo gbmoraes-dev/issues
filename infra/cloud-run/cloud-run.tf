@@ -1,5 +1,5 @@
 resource "google_cloud_run_v2_service" "todo" {
-  name     = "todo"
+  name     = "issues"
   location = var.region
 
   deletion_protection = false
