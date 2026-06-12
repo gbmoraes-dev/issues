@@ -93,15 +93,3 @@ resource "google_cloud_run_v2_service_iam_member" "public" {
   member   = "allUsers"
 }
 
-resource "google_cloud_run_domain_mapping" "todo" {
-  location = var.region
-  name     = var.domain
-
-  metadata {
-    namespace = var.project_id
-  }
-
-  spec {
-    route_name = google_cloud_run_v2_service.todo.name
-  }
-}

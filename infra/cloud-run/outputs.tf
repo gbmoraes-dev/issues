@@ -13,8 +13,3 @@ output "service_account_key" {
   value       = google_service_account_key.github_actions_key.private_key
   sensitive   = true
 }
-
-output "domain_mapping_records" {
-  description = "DNS records to configure in Cloudflare"
-  value       = google_cloud_run_domain_mapping.todo.status[0].resource_records
-}
