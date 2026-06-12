@@ -1,0 +1,30 @@
+spring:
+  application:
+    name: issues
+  datasource:
+    url: jdbc:postgresql://localhost:5432/issues
+    username: ${POSTGRES_USER}
+    password: ${POSTGRES_PASSWORD}
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: true
+  flyway:
+    enabled: true
+    locations: classpath:db/migration
+
+springdoc:
+  paths-to-exclude:
+    - /docs
+    - /docs/**
+
+scalar:
+  enabled: true
+  url: /v3/api-docs
+  path: /docs
+  theme: default
+  layout: modern
+
+jwt:
+  secret: ${JWT_SECRET}
+  expiration-ms: ${JWT_EXPIRATION:86400000}
