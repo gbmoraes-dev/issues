@@ -10,7 +10,7 @@ terraform {
     organization = "gbmoraes"
 
     workspaces {
-      name = "a3"
+      name = "issues"
     }
   }
 }
