@@ -5,7 +5,7 @@ resource "google_project_service" "artifactregistry" {
 
 resource "google_artifact_registry_repository" "todo" {
   location      = var.region
-  repository_id = "todo"
+  repository_id = "issues"
   format        = "DOCKER"
   mode          = "STANDARD_REPOSITORY"
 
